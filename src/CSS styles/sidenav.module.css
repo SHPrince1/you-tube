@@ -1,11 +1,13 @@
 .navBox{
     /* border: 1px solid red; */
     width: 17%;
+    height: 90vh;
     margin: 0 26px;
     display: block;
     justify-content: left;
     align-items: left;
    
+   overflow-y: scroll;
 }
 .navBox p{
     font-size: 14px;
