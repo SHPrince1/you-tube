@@ -1,0 +1,26 @@
+.navBox{
+    /* border: 1px solid red; */
+    width: 17%;
+    margin: 0 26px;
+    display: block;
+    justify-content: left;
+    align-items: left;
+   
+}
+.iconMenu{
+    /* border: 1px solid red; */
+    background-color: #f2f2f2;
+    height: 36px;
+    margin: 4px auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.iconMenu :hover{
+    background-color: #f2f2f2;
+    cursor: pointer;
+
+}
