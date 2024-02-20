@@ -1,6 +1,6 @@
 .navBox{
     /* border: 1px solid red; */
-    width: 17%;
+    width: 16%;
     height: 90vh;
     margin: 0 26px;
     display: block;
@@ -16,18 +16,32 @@
 }
 .iconMenu{
     /* border: 1px solid red; */
-    background-color: #f2f2f2;
+    /* background-color: #f2f2f2; */
     height: 36px;
     margin: 4px auto;
     padding: 0 10px;
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-right: 20px;
+    margin-right: 14px;
     border-radius: 10px;
 }
 .iconMenu :hover{
     background-color: #f2f2f2;
     cursor: pointer;
+    
+
+}
+.iconMenuContent{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 36px;
+    padding: 0 4px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    /* margin-right: 20px; */
+    border-radius: 10px;
 
 }
