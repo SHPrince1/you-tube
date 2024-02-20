@@ -7,6 +7,11 @@
     align-items: left;
    
 }
+.navBox p{
+    font-size: 14px;
+    color: #0f2636;
+    font-weight: 500;
+}
 .iconMenu{
     /* border: 1px solid red; */
     background-color: #f2f2f2;

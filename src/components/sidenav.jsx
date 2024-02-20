@@ -30,6 +30,7 @@ const Sidenav = () => {
 
         </div>
         <hr />
+        {/* first */}
         <div className={Style.firstBox}>
 
           <div className={Style.iconMenu}>
@@ -58,7 +59,69 @@ const Sidenav = () => {
           </div>
 
         </div>
+
+        {/* subscriptions */}
         <hr />
+        <div className={Style.firstBox}>
+
+          <div className={Style.iconMenu}>
+            <p>SUBCRIPTIONS</p>
+            {/* < GoChevronRight ize={24} /> */}
+          </div>
+          <div className={Style.iconMenu}>
+            <SiShortcut />
+            <p>Your Channel</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <SiShortcut />
+            <p>History</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <SiShortcut />
+            <p>Play List</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <MdOutlineSubscriptions />
+            <p>Watched later</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <MdOutlineSubscriptions />
+            <p>Liked videos</p>
+          </div>
+
+        </div>
+
+        {/* explore */}
+        <hr />
+   
+        <div className={Style.firstBox}>
+
+          <div className={Style.iconMenu}>
+            <p>EXPLORE</p>
+            {/* < GoChevronRight ize={24} /> */}
+          </div>
+          <div className={Style.iconMenu}>
+            <SiShortcut />
+            <p>Trending</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <SiShortcut />
+            <p>Music</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <SiShortcut />
+            <p>Gaming</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <MdOutlineSubscriptions />
+            <p>News</p>
+          </div>
+          <div className={Style.iconMenu}>
+            <MdOutlineSubscriptions />
+            <p>Sports</p>
+          </div>
+
+        </div>
 
       </div>
     </>
