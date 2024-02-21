@@ -1,6 +1,6 @@
 import React from 'react'
 // css
-import Style from '../CSS styles/sidenav.module.css'
+import Style from '../../CSS styles/sidenav.module.css'
 
 // react icons
 import { IoMdHome } from "react-icons/io";

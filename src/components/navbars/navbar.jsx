@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Style from '../CSS styles/navbar.module.css'
+import Style from '../../CSS styles/navbar.module.css'
 
 // react icons
 import { IoMicCircleOutline } from "react-icons/io5";
