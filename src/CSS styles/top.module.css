@@ -1,7 +1,7 @@
 .topNavContainer{
     position: relative;
-    border: 1px solid blue;
-    width: 80%;
+    /* border: 1px solid blue; */
+    width: 78%;
     margin: 0 18%;
     /* height: 90px; */
 }
@@ -9,19 +9,23 @@
 .btnBox{
     /* border: 1px solid red; */
     display: flex;
-    gap: 10px;
-    align-items: right;
-    justify-content: right;
+    gap: 20px;
+   
 
     width: 100%;
     position: absolute;
     /* height: 120px; */
-    /* margin: 0 14%; */
+    margin: 0 1%;
     overflow-x:scroll;
 }
 
-.btnBox button{
-    align-items:left;
-    font-size: 12px;
+.btnBox p{
+    /* position: absolute; */
+    /* align-items:left; */
+    font-size: 14px;
+    border: 1px solid red;
+    border-radius: 10px;
+    height: 28px;
+    width: 100%;
     /* background-color: red; */
 }

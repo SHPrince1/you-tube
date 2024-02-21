@@ -6,22 +6,26 @@ const TopNav = () => {
         <>
 <div className={Style.topNavContainer}>
 <div className={Style.btnBox}>
-                <button >All</button>
-                <button >Music</button>
-                <button >Live</button>
-                <button >Nollywood</button>
-                <button >News</button>
-                <button >Gaming</button>
-                <button >Contemporary Worship Music</button>
-                <button >Sketch comedy</button>
-                <button >News</button>
-                <button >Gaming</button>
-                <button >Contemporary Worship Music</button>
-                <button >Sketch comedy</button>
-                <button >News</button>
-                <button >Gaming</button>
-                <button >Contemporary Worship Music</button>
-                <button >Sketch comedy</button>
+                <p >All</p>
+                <p >Music</p>
+                <p >Live</p>
+                <p >Nollywood</p>
+                <p >News</p>
+                <p >Gaming</p>
+                <p >Contemporary Worship Music</p>
+                <p >Sketch comedy</p>
+                <p >News</p>
+                <p >Gaming</p>
+                <p >Contemporary Worship Music</p>
+                <p >Sketch comedy</p>
+                <p >News</p>
+                <p >Gaming</p>
+                <p >Contemporary Worship Music</p>
+                <p >Sketch comedy</p>
+                <p >News</p>
+                <p >Gaming</p>
+                <p >Contemporary Worship Music</p>
+                <p >Sketch comedy</p>
             </div>
 
 </div>
