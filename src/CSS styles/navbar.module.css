@@ -1,10 +1,13 @@
 .navBox{
     /* border: 1px solid black; */
     width: 95%;
-    margin: 10px auto;
+    margin: 0px 28px;
     justify-content: space-between;
     align-items: center;
     display: flex;
+    position: fixed;
+    z-index: 99;
+    background-color: #fff;
 }
 .leftBox, .rightBox, .midBox {
     display: flex;

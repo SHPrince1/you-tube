@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from '../src/components/navbars/navbar';
 import Sidenav from '../src/components/navbars/sidenav';
 import TopNav from './components/navbars/top-nav';
+import AllVideos from './components/navbars/videos/all-videos';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
      <Navbar />
      <TopNav />
      <Sidenav />
+     <AllVideos />
     </div>
   );
 }

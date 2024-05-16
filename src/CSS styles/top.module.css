@@ -1,21 +1,28 @@
 .topNavContainer{
-    position: relative;
+    position: fixed;
     /* border: 1px solid blue; */
-    width: 78%;
-    margin: 0 18%;
-    /* height: 90px; */
+    width: 80%;
+    margin: 50px 18%;
+    height: 10px;
+    z-index: 99;
+    background-color: #fff;
 }
-
+.emptyDiv{
+    background-color: #fff;
+    height: 20px;
+    margin-top: -8px;
+    color: #fff;
+}
 .btnBox{
     /* border: 1px solid red; */
+    background-color: #fff;
     display: flex;
     gap: 10px;
-   
 
     width: 100%;
     position: absolute;
     /* height: 120px; */
-    margin: 0 1%;
+    margin-top: 0px;
     overflow-x:scroll;
 }
 
