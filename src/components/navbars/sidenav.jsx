@@ -20,7 +20,7 @@ const Sidenav = () => {
             <div className={Style.iconMenuContent}>
 
               <IoMdHome size={24} />
-              <p>Home</p>
+              <a href="/"> Home</a>
             </div>
           </div>
           <div className={Style.iconMenu}>

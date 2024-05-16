@@ -14,16 +14,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -32,16 +31,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -50,16 +48,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -68,16 +65,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -86,16 +82,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -104,16 +99,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -122,16 +116,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -140,16 +133,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -158,16 +150,15 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
-
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
             <img src={TestImage} className={Style.displayImage} />
@@ -176,18 +167,49 @@ const AllVideos = () => {
             <div className={Style.channelImage}>
               <img src={TestImage} />
             </div>
-            <div className={ Style.Videotitle}>
+            <div className={Style.Videotitle}>
               <p>This is the title of the video that is to be played</p>
             </div>
           </div>
 
-          <div className={ Style.pageTitle}>
-            <p>This is the title of the page to be displayed</p>
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
           </div>
         </div>
+        <div className={Style.movieBoxDiv}>
+          <div className={Style.displayImageBox}>
+            <img src={TestImage} className={Style.displayImage} />
+          </div>
+          <div className={Style.pageTitleAndImage}>
+            <div className={Style.channelImage}>
+              <img src={TestImage} />
+            </div>
+            <div className={Style.Videotitle}>
+              <p>This is the title of the video that is to be played</p>
+            </div>
+          </div>
 
-      
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
+          </div>
+        </div>
+        <div className={Style.movieBoxDiv}>
+          <div className={Style.displayImageBox}>
+            <img src={TestImage} className={Style.displayImage} />
+          </div>
+          <div className={Style.pageTitleAndImage}>
+            <div className={Style.channelImage}>
+              <img src={TestImage} />
+            </div>
+            <div className={Style.Videotitle}>
+              <p>This is the title of the video that is to be played</p>
+            </div>
+          </div>
 
+          <div className={Style.pageTitle}>
+            <a href="#">This is the title of the page to be displayed</a>
+          </div>
+        </div>
       </div>
     </>
   );

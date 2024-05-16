@@ -57,10 +57,11 @@
     text-align: left;
     margin: 0 auto;
 }
-.pageTitle p{
+.pageTitle a{
     width: 80%;
     justify-content: center;
     text-align: left;
     color: #707070;
     font-size: 18px;
+    text-decoration: none;
 }

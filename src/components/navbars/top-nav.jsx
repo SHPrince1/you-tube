@@ -7,16 +7,16 @@ const TopNav = () => {
       <div className={Style.topNavContainer}>
 
         <div className={Style.emptyDiv}>  
-""
+
         </div>
         <div className={Style.btnBox}>
           <div className={Style.btns}>
             {" "}
-            <a href=""> All</a>
+            <a href="/"> All</a>
           </div>
           <div className={Style.btns}>
             {" "}
-            <a href="">Music </a>
+            <a href="www.new">Music </a>
           </div>
           <div className={Style.btns}>
             {" "}
