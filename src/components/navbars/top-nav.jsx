@@ -6,26 +6,26 @@ const TopNav = () => {
         <>
 <div className={Style.topNavContainer}>
 <div className={Style.btnBox}>
-                <p >All</p>
-                <p >Music</p>
-                <p >Live</p>
-                <p >Nollywood</p>
-                <p >News</p>
-                <p >Gaming</p>
-                <p >Contemporary Worship Music</p>
-                <p >Sketch comedy</p>
-                <p >News</p>
-                <p >Gaming</p>
-                <p >Contemporary Worship Music</p>
-                <p >Sketch comedy</p>
-                <p >News</p>
-                <p >Gaming</p>
-                <p >Contemporary Worship Music</p>
-                <p >Sketch comedy</p>
-                <p >News</p>
-                <p >Gaming</p>
-                <p >Contemporary Worship Music</p>
-                <p >Sketch comedy</p>
+                <div className={Style.btns}>All</div>
+                <div className={Style.btns}>Music</div>
+                <div className={Style.btns} >Live</div>
+                <div className={Style.btns} >Nollywood</div>
+                <div  className={Style.btns}>News</div>
+                <div  className={Style.btns}>Gaming</div>
+                <div className={Style.btns} >Contemporary Worship Music</div>
+                <div className={Style.btns}>Sketch comedy</div>
+                <div className={Style.btns} >News</div>
+                <div className={Style.btns}>Gaming</div>
+                <div className={Style.btns}>Contemporary Worship Music</div>
+                <div className={Style.btns}>Sketch comedy</div>
+                <div className={Style.btns} >News</div>
+                <div className={Style.btns}>Gaming</div>
+                <div className={Style.btns}>Contemporary Worship Music</div>
+                <div className={Style.btns}>Sketch comedy</div>
+                <div className={Style.btns}>News</div>
+                <div className={Style.btns}  >Gaming</div>
+                <div className={Style.btns}>Contemporary Worship Music</div>
+                <div className={Style.btns}>Sketch comedy</div>
             </div>
 
 </div>

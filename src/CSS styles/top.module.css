@@ -19,7 +19,7 @@
     overflow-x:scroll;
 }
 
-.btnBox p{
+.btns{
     /* position: absolute; */
     /* align-items:left; */
     font-size: 14px;
@@ -27,5 +27,8 @@
     border-radius: 10px;
     height: 28px;
     width: 100%;
+    padding: 5px 5px 0 1px;
+    display: inline-block;
+    text-wrap: nowrap;
     /* background-color: red; */
 }
