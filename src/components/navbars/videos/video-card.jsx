@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Style from "../../../CSS styles/allvideos.module.css";
+import Style2 from "../../../CSS styles/video-card.module.css";
 import testImg from "../../../images/testImg.mp4";
 import ReactPlayer from "react-player";
 import TestImage from "../../../images/test.jpg";
@@ -20,20 +21,21 @@ const VideoCard = (props) => {
 
   return (
     <>
-      <div className={Style.AllVideosContainer}>
+      <div className={Style2.AllVideosContainer}>
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
+            <img src={props.video} alt="" width='350px'  height='250px'/>
            
             <ReactPlayer
               url={props.video}
               controls={true}
-              width={350}
+             
               height={250}
             />
           </div>
           <div className={Style.pageTitleAndImage}>
             <div className={Style.channelImage}>
-              <img src={props.testImage} />
+              {/* <img src={props.testImage} /> */}
             </div>
             <div className={Style.Videotitle}>
               <p>{props.videoTitle}</p>
@@ -45,6 +47,7 @@ const VideoCard = (props) => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };

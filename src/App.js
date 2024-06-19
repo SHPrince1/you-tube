@@ -6,7 +6,7 @@ import Navbar from "../src/components/navbars/navbar";
 import Sidenav from "../src/components/navbars/sidenav";
 import TopNav from "./components/navbars/top-nav";
 import VideoCard from "./components/navbars/videos/video-card";
-import Video from "./components/navbars/videos/video";
+import AllVideos from "./components/navbars/videos/all-video";
 
 function App() {
   return (
@@ -15,12 +15,13 @@ function App() {
         <Navbar />
         <TopNav />
         <Sidenav />
+        {/* <AllVideos /> */}
       </div>
 
       <div className="DivRouter">
         <Router>
           <Routes>
-            <Route exact path="/" element={<Video />} />
+            <Route exact path="/" element={<AllVideos />} />
             
             {/* <Route exact path="page1" element={<Page1 />} />
             <Route exact path="page2" element={<Page2 />} />

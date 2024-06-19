@@ -1,5 +1,5 @@
 import React from 'react'
-import AllVideos from '../components/navbars/videos/all-videos'
+import AllVideos from '../components/videos/all-video'
 
 const index = () => {
   return (
