@@ -45,17 +45,25 @@
 }
 .pageTitleAndImage{
     display: flex;
-    width: 90%;
+    width: 100%;
     gap: 10px;
-    text-align: left;
+    text-align: center;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     
 }
 .Videotitle{
+    border: 1px solid red;
+    width: 100%;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 14px;
+    color: red;
+    /* margin: 0 auto; */
+}
+.Videotitle p{
+    color: blue;
+
 }
 
 .channelImage img{

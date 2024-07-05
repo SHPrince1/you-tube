@@ -5,24 +5,28 @@ import testImg from "../../../images/testImg.mp4";
 import ReactPlayer from "react-player";
 import TestImage from "../../../images/test.jpg";
 import VideoCard from "./video-card";
+// import TestComp from "./testComp";
 
 const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
 
   const options = {
-    method: "GET",
-    url:'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc',
-  headers: {
-    accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTc1ZTlkZWY4ODk1ZDhjMWY5ZTgyNGRjNzAzMzQ3MyIsInN1YiI6IjY2NDg3N2E0MGQ2Y2Q2ZjUwZjJmNmUyNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QpdYYqmG9cbFoPEZrGPC01CcUWHhx7yqTk11INHHBlI'
-  }
+    method: "get",
+    url: "https://api.themoviedb.org/3/discover/movie?api_key=8a75e9def8895d8c1f9e824dc7033473",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTc1ZTlkZWY4ODk1ZDhjMWY5ZTgyNGRjNzAzMzQ3MyIsInN1YiI6IjY2NDg3N2E0MGQ2Y2Q2ZjUwZjJmNmUyNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QpdYYqmG9cbFoPEZrGPC01CcUWHhx7yqTk11INHHBlI",
+    },
   };
 
   useEffect(() => {
     axios
       .request(options)
       .then(function (response) {
-        setMovieData(response.data);
+        // console.log(`original reponse${JSON.stringify(response.data.results)}`)
+        setMovieData(response.data.results);
+
       })
       .catch(function (error) {
         console.error(error);
@@ -30,49 +34,40 @@ const AllVideos = () => {
   });
 
 
-  let movieDataKeys=Object.values(movieData)
+  let movieDataKeys = Object.values(movieData);
 
-  let newData = movieDataKeys
+  let newData = movieDataKeys;
+
+  // console.log( movieDataKeys);
+  // console.log(`results ${JSON.stringify(movieData)}`)
+  return (
    
-
-
-  console.log('ok', movieDataKeys)
-  return(
     <div className={Style.movieDataBox}>
-     
+      {movieData.map((item, index) => {
+    //  console.log(item?.poster_path.jpg);
+        return(
+          <VideoCard
+            key={index}
+            poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`} 
+            // poster_path={item?.poster_path.jpg}
+            title={item.title}
+            // video={item.false}
+            // testImage={"https://fakeimg.pl/500x500/ff6600"}
+            release_date={item.release_date}
+            // overview={item.overview}
+            // pageTitle={item.original_title}
+          />
+        )
+       
+        // console.log(`item${item.title}`);
+        
+        
 
-       {movieDataKeys.map((item, index) => (
-                <VideoCard
-                  key={index}
-                  img={item?.flags?.png}
-                  // title={item?.name?.common}
-                  video={item.backdrop_path?.jpg}
-                  // testImage={"https://fakeimg.pl/500x500/ff6600"}
-                  videoTitle={item.original_title}
-                  pageTitle={'Object.overview'}
-                  
-                  
-                />
-              ))}
+        
+      })}
     </div>
-  )
+  );
 };
 
+
 export default AllVideos;
-
-
-
-// genre:    array
-// rating:    number
-// director:    string
-// actors:    array
-// plot:    string
-// poster:    string
-// trailer:    string
-// runtime:    number
-// awards:    string
-// country:    string
-// language:    string
-// boxOffice:    string
-// production:    string
-// website:    string

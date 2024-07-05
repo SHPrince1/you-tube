@@ -7,6 +7,7 @@ import Sidenav from "../src/components/navbars/sidenav";
 import TopNav from "./components/navbars/top-nav";
 import VideoCard from "./components/navbars/videos/video-card";
 import AllVideos from "./components/navbars/videos/all-video";
+// import TestComp from "./components/navbars/videos/testComp";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Navbar />
         <TopNav />
         <Sidenav />
-        {/* <AllVideos /> */}
+        <AllVideos />
+        
       </div>
 
       <div className="DivRouter">
