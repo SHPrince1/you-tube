@@ -51,10 +51,10 @@ const AllVideos = () => {
             poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`} 
             // poster_path={item?.poster_path.jpg}
             title={item.title}
-            // video={item.false}
-            // testImage={"https://fakeimg.pl/500x500/ff6600"}
+            video={item.true}
+            backdrop_path={`https://image.tmdb.org/t/p/w500${item?.backdrop_path}`}
             release_date={item.release_date}
-            // overview={item.overview}
+            overview={item.overview}
             // pageTitle={item.original_title}
           />
         )

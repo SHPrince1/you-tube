@@ -14,13 +14,13 @@
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    width: 76%;
+    width: 78%;
     /* border: 1px solid red; */
-    margin: 120px 10px 20px 280px;
+    margin: 110px 10px 20px 270px;
 }
 .movieBoxDiv{
     /* border: 1px solid red; */
-    width: 32%;
+    width: 100%;
     /* display: flex; */
     /*height: 20%;
     */margin-top: 25px auto;
@@ -34,41 +34,67 @@
 
 .displayImage{
     width: 320px;
-    height: 250px;
+    height: 100px;
     display: flex;
+    /* z-index: 9999; */
+    
 }
 .displayImageBox{
     display: flex;
     margin: 0 auto;
     width: 330px;
     /* border: 1px solid blue; */
+    z-index: 1;
 }
+.movieImg{
+    border-radius: 20px;
+    cursor: pointer;
+    /* display: none; */
+    z-index: 2;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
 .pageTitleAndImage{
+    /* border: 1px solid red; */
     display: flex;
     width: 100%;
     gap: 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+    /* text-align: center; */
+    /* justify-content: ; */
+    /* align-items: center; */
+    margin: 6px auto;
     
 }
 .Videotitle{
-    border: 1px solid red;
-    width: 100%;
-    font-weight: bolder;
+    /* border: 1px solid red; */
+    width: 90%;
+    flex-wrap: wrap;
+    /* height: 40px; */
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    /* font-weight: bolder; */
     font-size: 14px;
-    color: red;
-    /* margin: 0 auto; */
+    /* color: red; */
+    margin: -8px auto;
+    font-family: poppins;
+    line-height: 0.4;
 }
-.Videotitle p{
-    color: blue;
+.releasedDate{
+    font-size: 16px;
+    font-family: poppins;
+    color: #8b6591;
+}
 
-}
 
 .channelImage img{
-    width: 50px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -89,3 +115,46 @@
     font-size: 18px;
     text-decoration: none;
 }
+.OverViewDiv{
+    display: none;
+    
+    background: rgba(0,0,0,0.9);
+    border-radius: 10px;
+    color: #fff;
+    width: 320px;
+    gap: 10px;
+    height: auto;
+    padding: 4px;
+    font-size: poppins;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left:-338px;
+  
+   z-index: 0;
+    
+    transition: 0.5 ease-in-out;
+    -webkit-transition: 0.5 ease-in-out;
+    -moz-transition: 0.5 ease-in-out;
+    -ms-transition: 0.5 ease-in-out;
+    -o-transition: 0.5 ease-in-out;
+}
+.OverViewDivParag{
+    /* display: none; */
+    font-size: 15px;
+    text-align: left;
+
+}
+.OverViewDivParag:hover{
+font-size: 15px;
+}
+
+.movieImg:hover +.OverViewDiv{
+    display: block;
+    /* font-size: 100px; */
+    height: fit-content;
+    margin-left: -328px;
+    overflow: hidden;
+    z-index: 4;
+    /* margin-top: 0px; */
+}
+

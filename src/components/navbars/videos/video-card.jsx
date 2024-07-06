@@ -7,11 +7,7 @@ import ReactPlayer from "react-player";
 import TestImage from "../../../images/test.jpg";
 // import { useEffect, useRef } from "react";
 
-
-
-
 const VideoCard = (props) => {
- 
   // const cloudinaryRef = useRef();
   // const videoRef = useRef();
 
@@ -25,15 +21,26 @@ const VideoCard = (props) => {
   // }, []);
 
   // console.log(`pageTitle${props.pageTitle}`)
-  
 
   return (
     <>
       <div className={Style2.AllVideosContainer}>
         <div className={Style.movieBoxDiv}>
           <div className={Style.displayImageBox}>
-            <img src={props.poster_path} alt='...' width='100%'  height='250px'/>
-            {/* <img src={`'test'${props.poster_path}`} alt={props.name} /> */}
+            <img
+              src={props.poster_path}
+              alt=""
+              width="100%"
+              height="250px"
+              className={Style.movieImg}
+            />
+
+            <div className={Style.OverViewDiv}>
+              <p className={Style.OverViewDivParag}>
+                <h5>{props.title} Overview:</h5> {props.overview}{" "}
+              </p>
+            </div>
+
             {/* <ReactPlayer
               url={props.video}
               controls={true}
@@ -42,37 +49,24 @@ const VideoCard = (props) => {
             /> */}
           </div>
           <div className={Style.pageTitleAndImage}>
-            {/* <div className={Style.channelImage}>
-              <img src={props.testImage} />
-            </div> */}
+            <div className={Style.channelImage}>
+              <img src={props.backdrop_path} />
+              {/* <p>{props.rate}</p> */}
+            </div>
             <div className={Style.Videotitle}>
               <p>{props.title}</p>
-              {/* <p>Test</p> */}
+              <p className={Style.releasedDate}>{props.release_date}</p>
             </div>
           </div>
 
           <div className={Style.pageTitle}>
-            <a href="#">{props.release_date}</a>
+            {/* <a href="#">{props.release_date}</a> */}
             {/* <a>PageTitle</a> */}
           </div>
-
-          {/* <p>{props.overview}</p> */}
-          
         </div>
-
-        
-        
       </div>
-      
     </>
   );
-
-
-//   return (
-//     <div>
-//     <h1>React Function Component</h1>
-//     </div>
-//   )
 };
 
 export default VideoCard;
