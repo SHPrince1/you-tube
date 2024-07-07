@@ -43,7 +43,7 @@ const AllVideos = () => {
   return (
    
     <div className={Style.movieDataBox}>
-      {movieData.map((item, index) => {
+      {movieDataKeys.map((item, index) => {
     //  console.log(item?.poster_path.jpg);
         return(
           <VideoCard
