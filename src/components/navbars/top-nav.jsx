@@ -20,11 +20,11 @@ const TopNav = () => {
           </div>
           <div className={Style.btns}>
             {" "}
-            <a href="">Live </a>{" "}
+            <a href='www.shprince.netlify.app'>Live </a>{" "}
           </div>
           <div className={Style.btns}>
             {" "}
-            <a href="">Nollywood</a>
+            <a href='www.shprince.netlify.app'>Nollywood</a>
           </div>
           <div className={Style.btns}> News</div>
           <div className={Style.btns}>Gaming</div>

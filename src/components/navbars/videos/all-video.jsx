@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Style from "../../../CSS styles/allvideos.module.css";
-import testImg from "../../../images/testImg.mp4";
-import ReactPlayer from "react-player";
-import TestImage from "../../../images/test.jpg";
+// import testImg from "../../../images/testImg.mp4";
+// import ReactPlayer from "react-player";
+// import TestImage from "../../../images/test.jpg";
 import VideoCard from "./video-card";
 // import TestComp from "./testComp";
 
@@ -36,7 +36,7 @@ const AllVideos = () => {
 
   let movieDataKeys = Object.values(movieData);
 
-  let newData = movieDataKeys;
+  // let newData = movieDataKeys;
 
   // console.log( movieDataKeys);
   // console.log(`results ${JSON.stringify(movieData)}`)

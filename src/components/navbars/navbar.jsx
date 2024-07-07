@@ -17,7 +17,7 @@ const Navbar = () => {
             <GiHamburgerMenu size={20} />
           </div>
           <div>
-            <a href="">
+            <a href="www.shprince.netlify.app">
               <img
                 src="https://static.india.com/wp-content/uploads/2022/12/youtube-5.jpg"
                 alt=""

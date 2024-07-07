@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route,  Routes } from "react-router-dom";
 import Navbar from "../src/components/navbars/navbar";
 import Sidenav from "../src/components/navbars/sidenav";
 import TopNav from "./components/navbars/top-nav";
-import VideoCard from "./components/navbars/videos/video-card";
+// import VideoCard from "./components/navbars/videos/video-card";
 import AllVideos from "./components/navbars/videos/all-video";
 // import TestComp from "./components/navbars/videos/testComp";
 

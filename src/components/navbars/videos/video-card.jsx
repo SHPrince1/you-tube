@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 import Style from "../../../CSS styles/allvideos.module.css";
 import Style2 from "../../../CSS styles/video-card.module.css";
-import testImg from "../../../images/testImg.mp4";
-import ReactPlayer from "react-player";
-import TestImage from "../../../images/test.jpg";
+// import testImg from "../../../images/testImg.mp4";
+// import ReactPlayer from "react-player";
+// import TestImage from "../../../images/test.jpg";
 // import { useEffect, useRef } from "react";
 
 const VideoCard = (props) => {
@@ -50,7 +50,7 @@ const VideoCard = (props) => {
           </div>
           <div className={Style.pageTitleAndImage}>
             <div className={Style.channelImage}>
-              <img src={props.backdrop_path} />
+              <img src={props.backdrop_path} alt=""/>
               {/* <p>{props.rate}</p> */}
             </div>
             <div className={Style.Videotitle}>
