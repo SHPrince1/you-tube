@@ -59,13 +59,24 @@
 }
 @media only screen and (max-width: 425px) {
   /*Small smartphones [325px -> 425px]*/
-
+  .btnBox {
+    /* border: 1px solid red; */
+    background-color: #fff;
+    display: flex;
+    gap: 10px;
+  
+    width: 100%;
+    position: absolute;
+    /* height: 120px; */
+    margin-top: -4px;
+    overflow-x: scroll;
+  }
   .topNavContainer {
     /* display: none; */
     position: fixed;
     /* border: 1px solid blue; */
-    width: 95%;
-    margin: 50px 10px;
+    width: 98%;
+    margin: 50px 6px;
     height: 10px;
     z-index: 99;
     background-color: #fff;
