@@ -67,7 +67,6 @@
     -o-transition: transform .25;
 } */
 
-
 .pageTitleAndImage{
     /* border: 1px solid red; */
     display: flex;
@@ -130,7 +129,7 @@
 .OverViewDiv{
     /* display: none; */
     
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.9);
     border-radius: 10px;
     color: #fff;
     width: 100px;
@@ -173,7 +172,6 @@ font-size: 15px;
     */
     
 }
-
 
 
 /* MEDIA QUERY */
