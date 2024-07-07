@@ -30,14 +30,14 @@ const VideoCard = (props) => {
             <img
               src={props.poster_path}
               alt=""
-              width="100%"
-              height="250px"
+              
+              height="auto"
               className={Style.movieImg}
             />
 
             <div className={Style.OverViewDiv}>
               <p className={Style.OverViewDivParag}>
-                <h5>{props.title} Overview:</h5> {props.overview}{" "}
+                <h5>{props.title} Overview: </h5> {props.overview}{" "}
               </p>
             </div>
 
@@ -54,7 +54,7 @@ const VideoCard = (props) => {
               {/* <p>{props.rate}</p> */}
             </div>
             <div className={Style.Videotitle}>
-              <p>{props.title}</p>
+              <p className={Style.title}>{props.title}</p>
               <p className={Style.releasedDate}>{props.release_date}</p>
             </div>
           </div>

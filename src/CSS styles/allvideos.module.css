@@ -16,11 +16,12 @@
     flex-wrap: wrap;
     width: 78%;
     /* border: 1px solid red; */
-    margin: 110px 10px 20px 270px;
+    margin: 110px 10px 20px 290px;
 }
 .movieBoxDiv{
     /* border: 1px solid red; */
     width: 100%;
+    position: relative;
     /* display: flex; */
     /*height: 20%;
     */margin-top: 25px auto;
@@ -42,7 +43,8 @@
 .displayImageBox{
     display: flex;
     margin: 0 auto;
-    width: 330px;
+    width: auto;
+    height: 250px;
     /* border: 1px solid blue; */
     z-index: 1;
 }
@@ -56,6 +58,14 @@
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
+/* .movieImg:hover{
+    transition: transform .25;
+    scale: 1.5;
+    -webkit-transition: transform .25;
+    -moz-transition: transform .25;
+    -ms-transition: transform .25;
+    -o-transition: transform .25;
+} */
 
 
 .pageTitleAndImage{
@@ -71,7 +81,8 @@
 }
 .Videotitle{
     /* border: 1px solid red; */
-    width: 90%;
+    position: absolute;
+    width: 70%;
     flex-wrap: wrap;
     /* height: 40px; */
     justify-content: center;
@@ -80,14 +91,15 @@
     /* font-weight: bolder; */
     font-size: 14px;
     /* color: red; */
-    margin: -8px auto;
+    margin: -8px 50px;
     font-family: poppins;
-    line-height: 0.4;
+    line-height: 1;
 }
 .releasedDate{
     font-size: 16px;
     font-family: poppins;
     color: #8b6591;
+    margin-top: -10px;
 }
 
 
@@ -116,27 +128,23 @@
     text-decoration: none;
 }
 .OverViewDiv{
-    display: none;
+    /* display: none; */
     
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.5);
     border-radius: 10px;
     color: #fff;
-    width: 320px;
+    width: 100px;
     gap: 10px;
-    height: auto;
+    height: 100px;
     padding: 4px;
     font-size: poppins;
     overflow: hidden;
     cursor: pointer;
-    margin-left:-338px;
+    margin-left:-108px;
   
-   z-index: 0;
+   z-index: 1;
     
-    transition: 0.5 ease-in-out;
-    -webkit-transition: 0.5 ease-in-out;
-    -moz-transition: 0.5 ease-in-out;
-    -ms-transition: 0.5 ease-in-out;
-    -o-transition: 0.5 ease-in-out;
+    
 }
 .OverViewDivParag{
     /* display: none; */
@@ -150,11 +158,76 @@ font-size: 15px;
 
 .movieImg:hover +.OverViewDiv{
     display: block;
-    /* font-size: 100px; */
-    height: fit-content;
-    margin-left: -328px;
-    overflow: hidden;
+    position: absolute;
+    /*font-size: 100px;
+    *//*width: 200px;
+    */width: auto;
+    /* scale: 1.5; */
+    height: 220px;
+    margin-left: -4px;
+    /* overflow: hidden; */
+    /* transition:0.5 ease-out ; */
     z-index: 4;
-    /* margin-top: 0px; */
+    /*margin-top: 0px;
+    */
+    
 }
 
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+
+    .movieDataBox{
+        /* display: none; */
+        /* border: 1px solid red; */
+        width: auto;
+        margin: 110px 8px 20px 8px;
+}
+    .movieImg{
+        width: auto;
+    }
+    .Videotitle{
+        
+            font-size: 13px;
+            line-height: 1;
+            width: 120px;
+            flex-wrap: wrap;
+            font-weight: bolder;
+        }
+    
+    .releasedDate{
+        font-size: 10px;
+    }
+    .channelImage img{
+        /* display: none; */
+        visibility: hidden;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    .pageTitleAndImage{
+        /* border: 1px solid red; */
+        display: flex;
+        /* width: 100%; */
+        gap: 1px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: 6px auto;
+        
+    }
+    
+}

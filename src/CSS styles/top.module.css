@@ -1,51 +1,73 @@
-.topNavContainer{
+.topNavContainer {
+  position: fixed;
+  /* border: 1px solid blue; */
+  width: 80%;
+  margin: 50px 18%;
+  height: 10px;
+  z-index: 99;
+  background-color: #fff;
+}
+.emptyDiv {
+  background-color: #fff;
+  height: 20px;
+  margin-top: -8px;
+  color: #fff;
+}
+.btnBox {
+  /* border: 1px solid red; */
+  background-color: #fff;
+  display: flex;
+  gap: 10px;
+
+  width: 100%;
+  position: absolute;
+  /* height: 120px; */
+  margin-top: 0px;
+  overflow-x: scroll;
+}
+
+.btns {
+  position: relative;
+  /* align-items:left; */
+  font-size: 16px;
+  /* border: 1px solid red; */
+  background-color: #f2f2f2;
+  color: #0f0f0f;
+  font-weight: bolder;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  height: 24px;
+  width: 100%;
+  padding: 8px 8px 5px 10px;
+  display: inline-block;
+  text-wrap: nowrap;
+  /* background-color: red; */
+}
+.btns a {
+  text-decoration: none;
+  color: #0f0f0f;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px) {
+  /*Small smartphones [325px -> 425px]*/
+
+  .topNavContainer {
+    /* display: none; */
     position: fixed;
     /* border: 1px solid blue; */
-    width: 80%;
-    margin: 50px 18%;
+    width: 95%;
+    margin: 50px 10px;
     height: 10px;
     z-index: 99;
     background-color: #fff;
-}
-.emptyDiv{
-    background-color: #fff;
-    height: 20px;
-    margin-top: -8px;
-    color: #fff;
-}
-.btnBox{
-    /* border: 1px solid red; */
-    background-color: #fff;
-    display: flex;
-    gap: 10px;
-
-    width: 100%;
-    position: absolute;
-    /* height: 120px; */
-    margin-top: 0px;
-    overflow-x:scroll;
-}
-
-.btns{
-    position: relative;
-    /* align-items:left; */
-    font-size: 16px;
-    /* border: 1px solid red; */
-    background-color: #f2f2f2;
-    color: #0f0f0f;
-    font-weight: bolder;
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    height: 24px;
-    width: 100%;
-    padding: 8px 8px 5px 10px;
-    display: inline-block;
-    text-wrap: nowrap;
-    /* background-color: red; */
-}
-.btns a{
-    text-decoration: none;
-    color: #0f0f0f;
+  }
 }

@@ -36,3 +36,33 @@
     border-radius: 20px;
    
 }
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+
+    .navBox {
+        /* border: 1px solid black; */
+        width: 95%;
+        margin: 0px 0px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        position: fixed;
+        z-index: 99;
+        background-color: #fff;
+    }
+    .menuBox{
+        display: none;
+    }
+    .midBox input{
+        width: auto;
+    }
+}
