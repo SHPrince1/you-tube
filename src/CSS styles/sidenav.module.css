@@ -56,9 +56,35 @@
 /* MEDIA QUERY */
 @media only screen and (max-width: 1200px){
     /*Tablets [601px -> 1200px]*/
+
+    .navBox{
+        /* border: 1px solid red; */
+        position: fixed;
+        width: 20%;
+        height: 90vh;
+        margin: 60px 26px;
+        display: block;
+        justify-content: left;
+        align-items: left;
+       
+       overflow-y: scroll;
+    }
 }
 @media only screen and (max-width: 600px){
 	/*Big smartphones [426px -> 600px]*/
+
+    .navBox{
+        /* border: 1px solid red; */
+        position: fixed;
+        width: 20%;
+        height: 90vh;
+        margin: 60px 26px;
+        display: block;
+        justify-content: left;
+        align-items: left;
+       
+       overflow-y: scroll;
+    }
 }
 @media only screen and (max-width: 425px){
 	/*Small smartphones [325px -> 425px]*/

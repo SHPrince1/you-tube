@@ -9,10 +9,18 @@ import VideoCard from "./video-card";
 
 const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
+  const [page, setPage] = useState(19);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
+  const apiKey = '8a75e9def8895d8c1f9e824dc7033473';  // Replace with your TMDB API key
+  const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
+
+  // const fetch = require('node-fetch');
   const options = {
     method: "get",
-    url: "https://api.themoviedb.org/3/discover/movie?api_key=8a75e9def8895d8c1f9e824dc7033473",
+    url: apiUrl,
+
     headers: {
       accept: "application/json",
       Authorization:
@@ -21,53 +29,69 @@ const AllVideos = () => {
   };
 
   useEffect(() => {
-    axios
-      .request(options)
-      .then(function (response) {
-        // console.log(`original reponse${JSON.stringify(response.data.results)}`)
-        setMovieData(response.data.results);
+    const fetchMovieData = async (page) => {
+      try {
+        setLoading(true);
+        const response = await axios.get(apiUrl);
+        setMovieData(prevMovies => [...prevMovies, ...response.data.results]);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  });
+    fetchMovieData();
+  }, [page]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
+        setPage(prevPage => prevPage +1);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  if (error) return <p>Error loading movies: {error.message}</p>;
+
 
 
   let movieDataKeys = Object.values(movieData);
 
   // let newData = movieDataKeys;
 
-  // console.log( movieDataKeys);
+  console.log(movieDataKeys);
   // console.log(`results ${JSON.stringify(movieData)}`)
   return (
-   
     <div className={Style.movieDataBox}>
-      {movieDataKeys.map((item, index) => {
-    //  console.log(item?.poster_path.jpg);
-        return(
+      {movieDataKeys.map((item) => {
+        //  console.log(item?.poster_path.jpg);
+        return (
           <VideoCard
-            key={index}
-            poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`} 
+            // key={index}
+            poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
             // poster_path={item?.poster_path.jpg}
             title={item.title}
-            video={item.true}
+            video={item.video}
             backdrop_path={`https://image.tmdb.org/t/p/w500${item?.backdrop_path}`}
             release_date={item.release_date}
             overview={item.overview}
             // pageTitle={item.original_title}
           />
-        )
-       
-        // console.log(`item${item.title}`);
-        
-        
-
+        );
         
       })}
+      <div className={Style.btnBox}>
+      {loading && <p className="loading">Loading...</p>}
+      </div>
     </div>
   );
 };
-
 
 export default AllVideos;

@@ -42,7 +42,7 @@ const VideoCard = (props) => {
             </div>
 
             {/* <ReactPlayer
-              url={props.video}
+              video={props.video}
               controls={true}
              
               height={250}

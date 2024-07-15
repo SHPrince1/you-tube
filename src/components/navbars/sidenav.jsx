@@ -28,13 +28,13 @@ const Sidenav = () => {
             <div className={Style.iconMenuContent}>
 
               <SiShortcut />
-              <p>Short</p>
+              <button>Short</button>
             </div>
           </div>
           <div className={Style.iconMenu}>
             <div className={Style.iconMenuContent}>
               <MdOutlineSubscriptions />
-              <p>Subscription</p>
+              <button>Subscription</button>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const Sidenav = () => {
             <div className={Style.iconMenuContent}>
 
               <div className={Style.iconMenuContent}>
-                <p>You</p>
+                <button>You</button>
                 < GoChevronRight ize={24} />
               </div>
             </div>
@@ -56,31 +56,31 @@ const Sidenav = () => {
           <div className={Style.iconMenu}>
             <div className={Style.iconMenuContent}>
               <SiShortcut />
-              <p>Your Channel</p>
+              <button>Your Channel</button>
+            </div>
+          </div>
+            <div className={Style.iconMenu}>
+            <div className={Style.iconMenuContent}>
+              <SiShortcut />
+              <button>History</button>
             </div>
           </div>
           <div className={Style.iconMenu}>
             <div className={Style.iconMenuContent}>
               <SiShortcut />
-              <p>History</p>
-            </div>
-          </div>
-          <div className={Style.iconMenu}>
-            <div className={Style.iconMenuContent}>
-              <SiShortcut />
-              <p>Play List</p>
+              <button>Play List</button>
             </div>
           </div>
           <div className={Style.iconMenu}>
             <div className={Style.iconMenuContent}>
               <MdOutlineSubscriptions />
-              <p>Watched later</p>
+              <button>Watched later</button>
             </div>
           </div>
           <div className={Style.iconMenu}>
             <div className={Style.iconMenuContent}>
               <MdOutlineSubscriptions />
-              <p>Liked videos</p>
+              <button>Liked videos</button>
             </div>
           </div>
 
