@@ -17,16 +17,16 @@ const AllVideos = () => {
   const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
 
   // const fetch = require('node-fetch');
-  // const options = {
-  //   method: "get",
-  //   url: apiUrl,
+  const options = {
+    method: "get",
+    url: apiUrl,
 
-  //   headers: {
-  //     accept: "application/json",
-  //     Authorization:
-  //       "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTc1ZTlkZWY4ODk1ZDhjMWY5ZTgyNGRjNzAzMzQ3MyIsInN1YiI6IjY2NDg3N2E0MGQ2Y2Q2ZjUwZjJmNmUyNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QpdYYqmG9cbFoPEZrGPC01CcUWHhx7yqTk11INHHBlI",
-  //   },
-  // };
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4YTc1ZTlkZWY4ODk1ZDhjMWY5ZTgyNGRjNzAzMzQ3MyIsInN1YiI6IjY2NDg3N2E0MGQ2Y2Q2ZjUwZjJmNmUyNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.QpdYYqmG9cbFoPEZrGPC01CcUWHhx7yqTk11INHHBlI",
+    },
+  };
 
   useEffect(() => {
     const fetchMovieData = async (page) => {
@@ -41,7 +41,7 @@ const AllVideos = () => {
       }
     };
 
-    fetchMovieData();
+    fetchMovieData(options);
   }, [page]);
 
   useEffect(() => {
