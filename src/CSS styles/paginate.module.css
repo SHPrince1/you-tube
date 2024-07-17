@@ -43,13 +43,13 @@
     border: 1px solid red;
     width: 80px;
     height: 30px;
-    background-color: red;
+    background-color: green;
 }
 .nextBtn{
     border: 1px solid red;
     width: 80px;
     height: 30px;
-    background-color: green;
+    background-color: red;
 }
 
 

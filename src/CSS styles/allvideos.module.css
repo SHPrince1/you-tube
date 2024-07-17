@@ -20,7 +20,7 @@ button{
    
     display: flex;
     flex-wrap: wrap;
-    width: 78%;
+    width: 76%;
     /* border: 1px solid red; */
     margin: 90px 10px 20px 300px;
 }

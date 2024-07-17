@@ -11,7 +11,7 @@ import VideoCard from "./video-card";
 
 const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
-  const [page, setPage] = useState([200]);
+  const [page, setPage] = useState([500]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -58,7 +58,7 @@ const AllVideos = () => {
   };
 
   const decrement = () => {
-    setPage(prevCount => prevCount -1);
+    setPage(prevCount => prevCount < 1 ? prevCount -1 : 1);
     
   };
 
@@ -144,11 +144,13 @@ const AllVideos = () => {
         </div> */}
 
         <div  className={styled.paginated}>
-       
-      <button onClick={increment} className={styled.prevBtn}>
+    
+      <button onClick={decrement} className={styled.nextBtn}>
         Prev
       </button>
-      <button onClick={decrement} className={styled.nextBtn}>
+
+         
+      <button onClick={increment} className={styled.prevBtn}>
         Next
       </button>
         </div>
