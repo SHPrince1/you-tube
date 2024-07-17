@@ -1,15 +1,18 @@
 .paginated{
     display: flex;
-    gap: 10px;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
+    width: 80%;
+    /* gap: 10px; */
+    /* list-style: none; */
+    justify-content: space-around;
+    /* align-items: center; */
     /* margin-bottom: 4rem; */
+    margin: 0 auto;
     font-size: 21px;
-    margin-left: -31px;
+    margin-left: 200px;
     /* margin-top: 27px; */
-    /* background-color:#08b059; */
+    /* background-color: #08b059; */
     /* width: 300px; */
+
 }
 .paginated a {
     background-color: #252525;
@@ -40,16 +43,21 @@
     -o-border-radius: 10px;
 }
 .prevBtn{
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    border-radius: 20px;
     width: 80px;
     height: 30px;
     background-color: green;
+    cursor: pointer;
 }
 .nextBtn{
-    border: 1px solid red;
+    /*border: 1px solid red;
+    */border-radius: 20px;
     width: 80px;
     height: 30px;
     background-color: red;
+    cursor: pointer;
+    
 }
 
 

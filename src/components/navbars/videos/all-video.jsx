@@ -53,14 +53,14 @@ const AllVideos = () => {
   // };
 
 
+
   const increment = () => {
-    setPage(prevCount => prevCount + 1);
+    setPage(prevCount => (prevCount >= 500 ? 1 : prevCount + 1));
   };
 
   const decrement = () => {
-    setPage(prevCount => prevCount < 1 ? prevCount -1 : 1);
-    
-  };
+    setPage(prevCount => (prevCount <= 1 ? 500 : prevCount - 1));
+  };  
 
   useEffect(() => {
     const fetchMovieData = async (page) => {
@@ -76,7 +76,7 @@ const AllVideos = () => {
     };
 
     fetchMovieData();
-  }, [page, apiUrl]);
+  }, [page]);
 
   
 
@@ -84,11 +84,11 @@ const AllVideos = () => {
 
 
 
-  let movieDataKeys = Object.values(movieData);
+  // let movieDataKeys = Object.values(movieData);
 
   // let newData = movieDataKeys;
 
-  console.log(movieDataKeys);
+  // console.log(movieDataKeys);
   // console.log(`results ${JSON.stringify(movieData)}`)
 
 
@@ -102,7 +102,7 @@ const AllVideos = () => {
     <div className={Style.Container}>
       <div className={Style.movieDataBox}>
       {
-                movieDataKeys.map((item) => {
+                movieData.map((item) => {
         //  console.log(item?.poster_path.jpg);
         return (
           <VideoCard
