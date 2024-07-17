@@ -13,13 +13,16 @@ button{
     /* width: 25%; */
     margin: 10px 70px 10px 260px;
 }
-.movieDataBox{
+.Container{
     position: absolute;
+}
+.movieDataBox{
+   
     display: flex;
     flex-wrap: wrap;
     width: 78%;
     /* border: 1px solid red; */
-    margin: 110px 10px 20px 290px;
+    margin: 90px 10px 20px 300px;
 }
 .movieBoxDiv{
     /* border: 1px solid red; */

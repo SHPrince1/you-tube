@@ -22,7 +22,7 @@
   width: 100%;
   position: absolute;
   /* height: 120px; */
-  margin-top: 0px;
+  margin-top: -10px;
   overflow-x: scroll;
 }
 

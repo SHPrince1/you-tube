@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+// import ReactPaginate from "react-paginate";
 import Style from "../../../CSS styles/allvideos.module.css";
+import styled from "../../../CSS styles/paginate.module.css";
 // import testImg from "../../../images/testImg.mp4";
 // import ReactPlayer from "react-player";
 // import TestImage from "../../../images/test.jpg";
@@ -9,12 +11,31 @@ import VideoCard from "./video-card";
 
 const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
-  const [page, setPage] = useState(7);
+  const [page, setPage] = useState([200]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const apiKey = '8a75e9def8895d8c1f9e824dc7033473';  // Replace with your TMDB API key
   const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
+
+  // pagination code
+
+  // const [itemOffset, setItemOffset] = useState(1);
+  // const itemsPerPage = 16;
+  
+
+  // const endOffset = itemOffset + itemsPerPage;
+
+  // const currentItems = movieData.slice(itemOffset, endOffset);
+  // const pageCount = Math.ceil(movieData.length / itemsPerPage);
+
+  // const handlePageClick = (event) => {
+  //   const newOffset = (event.selected * itemsPerPage) % movieData.length;
+
+  //   setItemOffset(newOffset);
+  // };
+
+
 
 // 
 
@@ -31,12 +52,22 @@ const AllVideos = () => {
   //   },
   // };
 
+
+  const increment = () => {
+    setPage(prevCount => prevCount + 1);
+  };
+
+  const decrement = () => {
+    setPage(prevCount => prevCount -1);
+    
+  };
+
   useEffect(() => {
     const fetchMovieData = async (page) => {
       try {
         setLoading(true);
         const response = await axios.get(apiUrl);
-        setMovieData(prevMovies => [...prevMovies, ...response.data.results]);
+        setMovieData(response.data.results);
       } catch (error) {
         setError(error);
       } finally {
@@ -47,19 +78,7 @@ const AllVideos = () => {
     fetchMovieData();
   }, [page, apiUrl]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight) {
-        setPage(prevPage => prevPage +1);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  
 
   if (error) return <p>Error loading movies: {error.message}</p>;
 
@@ -71,9 +90,19 @@ const AllVideos = () => {
 
   console.log(movieDataKeys);
   // console.log(`results ${JSON.stringify(movieData)}`)
+
+
+
+
+   
+
+   
+   
   return (
-    <div className={Style.movieDataBox}>
-      {movieDataKeys.map((item) => {
+    <div className={Style.Container}>
+      <div className={Style.movieDataBox}>
+      {
+                movieDataKeys.map((item) => {
         //  console.log(item?.poster_path.jpg);
         return (
           <VideoCard
@@ -93,6 +122,39 @@ const AllVideos = () => {
       <div className={Style.btnBox}>
       {loading && <p className="loading">Loading...</p>}
       </div>
+      
+      </div>
+     
+
+      {/* <div className={styled.paginateBox}>
+          <ReactPaginate
+            className={styled.paginated}
+            breakLabel="-"
+            nextLabel="Next"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={20}
+            pageCount={pageCount}
+            previousLabel="Prev"
+            renderOnZeroPageCount={null}
+            containerClassName="pagination"
+            pageLinkClassName="page-num"
+            nextLinkClassName="page-num"
+            activeLinkClassName="active"
+          />
+        </div> */}
+
+        <div  className={styled.paginated}>
+       
+      <button onClick={increment} className={styled.prevBtn}>
+        Prev
+      </button>
+      <button onClick={decrement} className={styled.nextBtn}>
+        Next
+      </button>
+        </div>
+      
+
+      
     </div>
   );
 };
