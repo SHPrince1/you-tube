@@ -76,7 +76,7 @@ const AllVideos = () => {
     };
 
     fetchMovieData();
-  }, [page]);
+  }, [page, apiUrl]);
 
   
 
