@@ -83,15 +83,17 @@
         padding: 0 12px;
     }
     .paginated{
-    display: flex;
-    gap: 1px;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4rem;
-    font-size: 21px;
-    margin-left: -31px;
-    margin-top: 27px;
+    
+        align-items: center;
+        display: flex;
+        font-size: 21px;
+        gap: 1px;
+        justify-content: space-around;
+        list-style: none;
+        margin-bottom: 4rem;
+        margin-left: 42px;
+        margin-top: 27px;
+    
 }
 
 .paginated a {
