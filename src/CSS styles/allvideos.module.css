@@ -200,7 +200,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: 80%;
-        margin: 110px 8px 20px 80px;
+        margin: 110px auto;
 }
     .movieImg{
         width: auto;
@@ -245,7 +245,7 @@ font-size: 15px;
         display: flex;
         margin: 0 auto;
         width: auto;
-        height: 200px;
+        height: 230px;
         /* border: 1px solid blue; */
         z-index: 1;
     }
@@ -259,7 +259,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: 80%;
-        margin: 110px 8px 20px 44px;
+        margin: 110px auto;
 }
     .movieImg{
         width: auto;
@@ -299,6 +299,15 @@ font-size: 15px;
         align-items: center;
         margin: 6px auto;
         
+    }
+
+    .displayImageBox{
+        display: flex;
+        margin: 0 auto;
+        width: auto;
+        height: 200px;
+        /* border: 1px solid blue; */
+        z-index: 1;
     }
     
 }

@@ -65,4 +65,19 @@
     .midBox input{
         width: auto;
     }
+
+    .midBox input{
+        display: none;
+        width: 510px;
+        height: 36px;
+        margin: 0 auto;
+        border: 1px solid #dddddd;
+        border-color: #707070;
+        outline-color: #707070;
+        padding: 0 20px;
+        font-size: 15px;
+        font-weight: 100px;
+        border-radius: 20px;
+       
+    }
 }
