@@ -16,7 +16,7 @@ function App() {
         <Navbar />
         <TopNav />
         <Sidenav />
-        <AllVideos />
+        {/* <AllVideos /> */}
         
       </div>
 
