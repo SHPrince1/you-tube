@@ -11,7 +11,7 @@ import VideoCard from "./video-card";
 
 const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
-  const [page, setPage] = useState([500]);
+  const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
