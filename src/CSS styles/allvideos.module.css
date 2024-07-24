@@ -200,7 +200,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: 80%;
-        margin: 110px auto;
+        margin: 110px 0 0 48px;
 }
     .movieImg{
         width: auto;
@@ -259,7 +259,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: 80%;
-        margin: 110px auto;
+        margin: 110px 0 0 48px;
 }
     .movieImg{
         width: auto;
@@ -318,7 +318,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: auto;
-        margin: 110px 8px 20px 10px;
+        margin: 110px 8px 20px 20px;
 }
     .movieImg{
         width: auto;

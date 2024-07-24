@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState } from "react";
 
 import Style from "../../CSS styles/navbar.module.css";
 
@@ -8,7 +8,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoNotificationsCircleSharp } from "react-icons/io5";
 import { FaVideo } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
+import { FaChromecast } from "react-icons/fa";
+import ExpandableSearchBar from "../expandable-searchbar";
 const Navbar = () => {
+
+ 
+
   return (
     <>
       <div className={Style.navBox}>
@@ -27,24 +32,35 @@ const Navbar = () => {
         </div>
 
         <div className={Style.midBox}>
-          <div>
-            <input placeholder="Search" />
-          </div>
-          <div>
+        <div>
+  <input />
+</div>
+          <div className={Style.circleNotification}>
             <IoMicCircleOutline size={38} />
           </div>
         </div>
 
         <div className={Style.rightBox}>
-          <div>
+          <div className={Style.castIcon}>
+            <FaChromecast size={26} />
+          </div>
+          <div className={Style.vid}> 
             <FaVideo size={26} />
           </div>
           <div>
             <IoNotificationsCircleSharp size={26} />
           </div>
-          <div>
+          <div className={Style.userIcon}>
             <FaRegCircleUser size={26} />
           </div>
+
+          {/* <div className={Style.mobileSearchBar}>
+            <input />
+          </div> */}
+
+
+
+          
         </div>
       </div>
     </>
