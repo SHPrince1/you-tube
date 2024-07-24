@@ -1,4 +1,4 @@
-import React,{useState } from "react";
+import React from "react";
 
 import Style from "../../CSS styles/navbar.module.css";
 
@@ -9,7 +9,7 @@ import { IoNotificationsCircleSharp } from "react-icons/io5";
 import { FaVideo } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { FaChromecast } from "react-icons/fa";
-import ExpandableSearchBar from "../expandable-searchbar";
+// import ExpandableSearchBar from "../expandable-searchbar";
 const Navbar = () => {
 
  

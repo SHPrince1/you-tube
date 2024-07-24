@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Style from '../CSS styles/expandablesearchbar.module.css' // Import the CSS file for styles
+// import Style from '../CSS styles/expandablesearchbar.module.css' // Import the CSS file for styles
 
 const ExpandableSearchBar = () => {
   const [isExpanded, setIsExpanded] = useState(false);

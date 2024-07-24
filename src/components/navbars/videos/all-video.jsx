@@ -15,6 +15,7 @@ const AllVideos = () => {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+
   const apiKey = "8a75e9def8895d8c1f9e824dc7033473"; 
   const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
 const increment = () => {
@@ -34,7 +35,7 @@ const increment = () => {
       } catch (error) {
         setError(error);
       } finally {
-        setLoading(false);
+        setLoading(error);
       }
     };
 
