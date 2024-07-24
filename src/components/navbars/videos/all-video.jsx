@@ -40,7 +40,7 @@ const increment = () => {
     };
 
     fetchMovieData();
-  }, [page, apiUrl]);
+  }, );
 
 
   return (
