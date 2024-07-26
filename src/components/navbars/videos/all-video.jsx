@@ -3,7 +3,7 @@ import axios from "axios";
 // import InfiniteScroll from "react-infinite-scroll-component";
 // import ReactPaginate from "react-paginate";
 import Style from "../../../CSS styles/allvideos.module.css";
-import styled from "../../../CSS styles/paginate.module.css";
+// import styled from "../../../CSS styles/paginate.module.css";
 // import testImg from "../../../images/testImg.mp4";
 // import ReactPlayer from "react-player";
 // import TestImage from "../../../images/test.jpg";
@@ -13,34 +13,56 @@ import VideoCard from "./video-card";
 const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const apiKey = "8a75e9def8895d8c1f9e824dc7033473"; 
   const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
-const increment = () => {
-    setPage((prevCount) => (prevCount >= 500 ? 1 : prevCount + 1));
-  };
+// const increment = () => {
+//     setPage((prevCount) => (prevCount >= 500 ? 1 : prevCount + 1));
+//   };
 
-  const decrement = () => {
-    setPage((prevCount) => (prevCount <= 1 ? 500 : prevCount - 1));
-  };
+//   const decrement = () => {
+//     setPage((prevCount) => (prevCount <= 1 ? 500 : prevCount - 1));
+//   };
 
   useEffect(() => {
     const fetchMovieData = async (page) => {
       try {
-        setLoading(true);
+        setLoading(false);
         const response = await axios.get(apiUrl);
-        setMovieData(response.data.results);
+        const newMovies = response.data.results;
+        setMovieData((prevData) => {
+          const existingMovieIds = new Set(prevData.map(movie => movie.id));
+          const filteredNewMovies = newMovies.filter(movie => !existingMovieIds.has(movie.id));
+          return [...prevData, ...filteredNewMovies];
+        });
       } catch (error) {
         setError(error);
       } finally {
-        setLoading(error);
+        setLoading(false);
       }
     };
 
-    fetchMovieData();
+    fetchMovieData(error);
   }, );
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const bottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+
+      if (bottom && !loading) {
+        setPage((prevPage) => prevPage + 1);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [loading]);
 
 
   return (
@@ -73,7 +95,7 @@ const increment = () => {
 
       
 
-      <div className={styled.paginated}>
+      {/* <div className={styled.paginated}>
         <button onClick={decrement} className={styled.nextBtn}>
           Prev
         </button>
@@ -81,7 +103,7 @@ const increment = () => {
         <button onClick={increment} className={styled.prevBtn}>
           Next
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
