@@ -35,11 +35,11 @@ const VideoCard = (props) => {
               className={Style.movieImg}
             />
 
-            <div className={Style.OverViewDiv}>
+            {/* <div className={Style.OverViewDiv}>
               <p className={Style.OverViewDivParag}>
                 <h5>{props.title} Overview: </h5> {props.overview}{" "}
               </p>
-            </div>
+            </div> */}
 
             {/* <ReactPlayer
               video={props.video}
