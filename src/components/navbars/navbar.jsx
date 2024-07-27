@@ -48,13 +48,15 @@ const Navbar = () => {
           <div>
             <IoNotificationsCircleSharp size={26} />
           </div>
+
+          <div>
+            <CustomInput />
+          </div>
           <div className={Style.userIcon}>
             <FaRegCircleUser size={26} />
           </div>
 
-          {/* <div className={Style.mobileSearchBar}>
-            <input />
-          </div> */}
+          
         </div>
       </div>
     </>
