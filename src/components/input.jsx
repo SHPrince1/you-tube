@@ -1,14 +1,19 @@
-import React from 'react'
+import {React, useContext }from 'react'
+import { SearchContext } from '../search-context';
+const CustomInput = () => {
+const { searchQuery, setSearchQuery } = useContext(SearchContext);
 
-const CustomInput = ({ query, setQuery }) => {
+const handleChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   return (
-    <div>
-
-        <input 
-        
-        />
-    </div>
-  )
-}
+    <input
+      type="text"
+      value={searchQuery}
+      onChange={handleChange}
+      placeholder="Search..."
+    />);
+};
 
 export default CustomInput

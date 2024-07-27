@@ -9,11 +9,9 @@ import { IoNotificationsCircleSharp } from "react-icons/io5";
 import { FaVideo } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { FaChromecast } from "react-icons/fa";
+import CustomInput from "../input";
 // import ExpandableSearchBar from "../expandable-searchbar";
 const Navbar = () => {
-
- 
-
   return (
     <>
       <div className={Style.navBox}>
@@ -32,9 +30,9 @@ const Navbar = () => {
         </div>
 
         <div className={Style.midBox}>
-        <div>
-  <input />
-</div>
+          <div>
+            <CustomInput />
+          </div>
           <div className={Style.circleNotification}>
             <IoMicCircleOutline size={38} />
           </div>
@@ -44,7 +42,7 @@ const Navbar = () => {
           <div className={Style.castIcon}>
             <FaChromecast size={26} />
           </div>
-          <div className={Style.vid}> 
+          <div className={Style.vid}>
             <FaVideo size={26} />
           </div>
           <div>
@@ -57,10 +55,6 @@ const Navbar = () => {
           {/* <div className={Style.mobileSearchBar}>
             <input />
           </div> */}
-
-
-
-          
         </div>
       </div>
     </>
