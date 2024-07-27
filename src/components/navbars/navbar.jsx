@@ -34,7 +34,7 @@ const Navbar = () => {
             <CustomInput />
           </div>
           <div className={Style.circleNotification}>
-            <IoMicCircleOutline size={38} />
+            <IoMicCircleOutline size={38} className={Style.circleNotification} />
           </div>
         </div>
 
@@ -42,9 +42,7 @@ const Navbar = () => {
           <div className={Style.castIcon}>
             <FaChromecast size={26} />
           </div>
-          <div className={Style.vid}>
-            <FaVideo size={26} />
-          </div>
+         
           <div>
             <IoNotificationsCircleSharp size={26} />
           </div>
@@ -52,9 +50,7 @@ const Navbar = () => {
           <div>
             <CustomInput />
           </div>
-          <div className={Style.userIcon}>
-            <FaRegCircleUser size={26} />
-          </div>
+        
 
           
         </div>
