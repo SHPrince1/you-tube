@@ -61,7 +61,7 @@ const AllVideos = () => {
         });
 
         currentPage += 1;
-        if (currentPage > 100) break; // Limit to 20 pages to avoid excessive API calls
+        if (currentPage > 20) break; // Limit to 20 pages to avoid excessive API calls
       }
     } catch (error) {
       setError(error);
@@ -106,7 +106,7 @@ const AllVideos = () => {
       <div className={Style.movieDataBox}>
         {filteredMovieData.map((item) => (
           <VideoCard
-            key={item.id}
+            // key={item.id}
             poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
             title={item.title}
             video={item.video}
