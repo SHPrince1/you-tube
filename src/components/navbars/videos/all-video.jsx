@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState, useCallback  } from "react";
+import React, { useContext, useEffect, useState, useCallback} from "react";
 import axios from "axios";
 import Fuse from 'fuse.js';
 import Style from "../../../CSS styles/allvideos.module.css";
@@ -17,7 +17,7 @@ const AllVideos = () => {
   const options = {
     keys: ['title'],
     includeScore: true,
-    threshold: 0.5,
+    threshold: 0.3,
   };
 
   const fuse = new Fuse(movieData, options);
@@ -106,7 +106,7 @@ const AllVideos = () => {
       <div className={Style.movieDataBox}>
         {filteredMovieData.map((item) => (
           <VideoCard
-            // key={item.id}
+            key={item.id}
             poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
             title={item.title}
             video={item.video}
