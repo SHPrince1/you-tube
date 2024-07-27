@@ -6,8 +6,7 @@ import Style from "../../CSS styles/navbar.module.css";
 import { IoMicCircleOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoNotificationsCircleSharp } from "react-icons/io5";
-import { FaVideo } from "react-icons/fa";
-import { FaRegCircleUser } from "react-icons/fa6";
+
 import { FaChromecast } from "react-icons/fa";
 import CustomInput from "../input";
 // import ExpandableSearchBar from "../expandable-searchbar";
