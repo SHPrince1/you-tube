@@ -61,7 +61,7 @@ const AllVideos = () => {
         });
 
         currentPage += 1;
-        if (currentPage > 20) break; // Limit to 20 pages to avoid excessive API calls
+        if (currentPage > 100) break; // Limit to 20 pages to avoid excessive API calls
       }
     } catch (error) {
       setError(error);
