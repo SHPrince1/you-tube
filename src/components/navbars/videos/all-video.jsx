@@ -1,61 +1,94 @@
-import React, { useEffect, useState,useContext   } from "react";
+import React, { useContext, useEffect, useState, useCallback  } from "react";
 import axios from "axios";
 import Fuse from 'fuse.js';
 import Style from "../../../CSS styles/allvideos.module.css";
 import VideoCard from "./video-card";
 import { SearchContext } from '../../../search-context';
-// import CustomInput from "../../input";
+
 const AllVideos = () => {
   const { searchQuery } = useContext(SearchContext);
   const [movieData, setMovieData] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const apiKey = "8a75e9def8895d8c1f9e824dc7033473"; 
-  const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
-  
+  const apiKey = "8a75e9def8895d8c1f9e824dc7033473";
+  const baseUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`;
 
-   // Configure Fuse.js
-   const options = {
+  const options = {
     keys: ['title'],
     includeScore: true,
-    threshold: 0.3, // threshold for more or less fuzzy matching
+    threshold: 0.5,
   };
 
   const fuse = new Fuse(movieData, options);
-
   const filteredMovieData = searchQuery
     ? fuse.search(searchQuery).map(result => result.item)
     : movieData;
 
+  const fetchMovieData = useCallback(async (page) => {
+    try {
+      setLoading(true);
+      const response = await axios.get(`${baseUrl}&page=${page}`);
+      const newMovies = response.data.results;
+      setMovieData((prevData) => {
+        const existingMovieIds = new Set(prevData.map(movie => movie.id));
+        const filteredNewMovies = newMovies.filter(movie => !existingMovieIds.has(movie.id));
+        return [...prevData, ...filteredNewMovies];
+      });
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  }, [baseUrl]);
 
-  useEffect(() => {
-    const fetchMovieData = async (page) => {
-      try {
-        setLoading(false);
-        const response = await axios.get(apiUrl);
+  const fetchAllPages = useCallback(async () => {
+    setMovieData([]);
+    let currentPage = 1;
+    let totalPages = 1;
+
+    try {
+      setLoading(true);
+      while (currentPage <= totalPages) {
+        const response = await axios.get(`${baseUrl}&page=${currentPage}`);
         const newMovies = response.data.results;
+        totalPages = response.data.total_pages;
+
         setMovieData((prevData) => {
           const existingMovieIds = new Set(prevData.map(movie => movie.id));
           const filteredNewMovies = newMovies.filter(movie => !existingMovieIds.has(movie.id));
           return [...prevData, ...filteredNewMovies];
         });
-      } catch (error) {
-        setError(error);
-      } finally {
-        setLoading(false);
+
+        currentPage += 1;
+        if (currentPage > 20) break; // Limit to 20 pages to avoid excessive API calls
       }
-    };
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  }, [baseUrl]);
 
-    fetchMovieData(error);
-  }, );
+  useEffect(() => {
+    if (searchQuery) {
+      fetchAllPages();
+    } else {
+      fetchMovieData(page);
+    }
+  }, [searchQuery, fetchAllPages, fetchMovieData, page]);
 
+  useEffect(() => {
+    if (!searchQuery && !loading) {
+      fetchMovieData(page);
+    }
+  }, [page, fetchMovieData, searchQuery, loading]);
 
   useEffect(() => {
     const handleScroll = () => {
       const bottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
 
-      if (bottom && !loading) {
+      if (bottom && !loading && !searchQuery) {
         setPage((prevPage) => prevPage + 1);
       }
     };
@@ -65,35 +98,28 @@ const AllVideos = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [loading]);
-
+  }, [loading, searchQuery]);
 
   return (
     <div className={Style.Container}>
-          <div className={Style.movieDataBox}>
-            {
-              filteredMovieData
-              
-              .map((item) => {
-              return (
-                <VideoCard
-                  key={item.index}
-                  poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
-                  // poster_path={item?.poster_path.jpg}
-                  title={item.title}
-                  video={item.video}
-                  backdrop_path={`https://image.tmdb.org/t/p/w500${item?.backdrop_path}`}
-                  release_date={item.release_date}
-                  // overview={item.overview}
-                  // pageTitle={item.original_title}
-                />
-              );
-            })}
-            <div className={Style.btnBox}>
-              {loading && <p className="loading">Loading...</p>}
-            </div>
-          </div>
+      {error && <div className={Style.error}>Error: {error.message}</div>}
+      <div className={Style.movieDataBox}>
+        {filteredMovieData.map((item) => (
+          <VideoCard
+            key={item.id}
+            poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
+            title={item.title}
+            video={item.video}
+            backdrop_path={`https://image.tmdb.org/t/p/w500${item?.backdrop_path}`}
+            release_date={item.release_date}
+          />
+        ))}
+        <div className={Style.btnBox}>
+          {loading && <p className="loading">Loading...</p>}
+        </div>
+      </div>
     </div>
   );
 };
+
 export default AllVideos;
