@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState, useCallback} from "react";
 import axios from "axios";
 import Fuse from 'fuse.js';
+// import LoadingSpin from "react-loading-spin";
 import Style from "../../../CSS styles/allvideos.module.css";
 import VideoCard from "./video-card";
 import { SearchContext } from '../../../search-context';
@@ -114,9 +115,20 @@ const AllVideos = () => {
             release_date={item.release_date}
           />
         ))}
-        <div className={Style.btnBox}>
-          {loading && <p className="loading">Loading...</p>}
-        </div>
+        {/* <div className={Style.btnBox}>
+          {loading && <p className="loading"><LoadingSpin 
+          duration="2s"
+          width="15px"
+          timingFunction="ease-in-out"
+          direction="alternate"
+          size="100px"
+          primaryColor="yellow"
+          secondaryColor="#333"
+          numberOfRotationsInAnimation={2}
+          
+          
+          /></p>}
+        </div> */}
       </div>
     </div>
   );
