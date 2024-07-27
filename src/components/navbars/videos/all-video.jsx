@@ -18,7 +18,7 @@ const AllVideos = () => {
   const options = {
     keys: ['title'],
     includeScore: true,
-    threshold: 0.3,
+    threshold: 0.5,
   };
 
   const fuse = new Fuse(movieData, options);
