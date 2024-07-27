@@ -15,23 +15,26 @@ button{
 }
 .Container{
     position: absolute;
+    /* background-color: #c9c9c9; */
 }
 .movieDataBox{
    
     display: flex;
     flex-wrap: wrap;
-    width: 76%;
+    padding: 10px 20px 0 11px;
+    width: 78%;
     /* border: 1px solid red; */
-    margin: 90px 10px 20px 300px;
-}
+    margin: 119px 10px 20px 252px;}
 .movieBoxDiv{
     /* border: 1px solid red; */
+    /* background-color: #c9c9c9; */
     width: 100%;
+    height: auto;
     position: relative;
     /* display: flex; */
     /*height: 20%;
     */margin-top: 25px auto;
-    line-height: 1;
+    line-height: 4;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -41,8 +44,8 @@ button{
 
 .displayImage{
     width: 320px;
-    height: 100px;
-    display: flex;
+    height: 150px;
+    display: flex
     /* z-index: 9999; */
     
 }

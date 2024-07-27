@@ -103,6 +103,7 @@ const AllVideos = () => {
 
   return (
     <div className={Style.Container}>
+      
       {error && <div className={Style.error}>Error: {error.message}</div>}
       <div className={Style.movieDataBox}>
         {filteredMovieData.map((item) => (
