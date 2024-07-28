@@ -11,9 +11,9 @@ const AllVideos = () => {
   const [movieData, setMovieData] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState();
   const apiKey = "8a75e9def8895d8c1f9e824dc7033473";
-  const baseUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`;
+  const baseUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${page}`;
 
   const options = {
     keys: ['title'],
@@ -116,20 +116,7 @@ const AllVideos = () => {
             release_date={item.release_date}
           />
         ))}
-        {/* <div className={Style.btnBox}>
-          {loading && <p className="loading"><LoadingSpin 
-          duration="2s"
-          width="15px"
-          timingFunction="ease-in-out"
-          direction="alternate"
-          size="100px"
-          primaryColor="yellow"
-          secondaryColor="#333"
-          numberOfRotationsInAnimation={2}
-          
-          
-          /></p>}
-        </div> */}
+      
       </div>
     </div>
   );
