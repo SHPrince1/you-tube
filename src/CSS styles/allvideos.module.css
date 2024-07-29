@@ -26,20 +26,25 @@ button{
     /* border: 1px solid red; */
     margin: 119px 10px 20px 252px;}
 .movieBoxDiv{
-    /* border: 1px solid red; */
-    /* background-color: #c9c9c9; */
-    width: 100%;
+    /*border: 1px solid red;
+    *//*background-color: #c9c9c9;
+    */width: 100%;
     height: auto;
     position: relative;
-    /* display: flex; */
-    /*height: 20%;
+    /*display: flex;
+    *//*height: 20%;
     */margin-top: 25px auto;
     line-height: 1;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    transition:.2s;
+   
+}
+.movieBoxDiv:hover{
+    
+    transform: scale(1.1)    ;
+    -webkit-transform: scale(1.1)    ;
+    -moz-transform: scale(1.1)    ;
+    -ms-transform: scale(1.1)    ;
+    -o-transform: scale(1.1)    ;
 }
 
 .displayImage{
