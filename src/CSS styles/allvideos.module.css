@@ -26,22 +26,29 @@ button{
     /* border: 1px solid red; */
     margin: 119px 10px 20px 252px;}
 .movieBoxDiv{
-    /* border: 1px solid red; */
-    /* background-color: #c9c9c9; */
-    width: 100%;
+    /*border: 1px solid red;
+    *//*background-color: #c9c9c9;
+    */width: 100%;
     height: auto;
     position: relative;
-    /* display: flex; */
-    /*height: 20%;
+    /*display: flex;
+    *//*height: 20%;
     */margin-top: 25px auto;
+    transition:ease-in .2s ;
     line-height: 1;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    -webkit-transition:ease-in .2s ;
+    -moz-transition:ease-in .2s ;
+    -ms-transition:ease-in .2s ;
+    -o-transition:ease-in .2s ;
 }
-
+.movieBoxDiv:hover{
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+}
 .displayImage{
     width: 320px;
     height: 150px;
@@ -212,6 +219,7 @@ font-size: 15px;
         margin: 100px 5px 10px 34px;
         
 }
+
     .movieImg{
         width: auto;
     }
