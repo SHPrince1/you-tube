@@ -8,14 +8,14 @@
   background-color: #fff;
 }
 .emptyDiv {
-  background-color: #fff;
+  background-color: #fffaf0;
   height: 20px;
   margin-top: -10px;
   color: #fff;
 }
 .btnBox {
   /* border: 1px solid red; */
-  background-color: #fff;
+  background-color: #fffaf0;
   display: flex;
   gap: 10px;
 

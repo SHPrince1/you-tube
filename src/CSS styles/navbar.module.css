@@ -7,7 +7,7 @@
     display: flex;
     position: fixed;
     z-index: 99;
-    background-color: #fff;
+    background-color: #fffaf0;
 }
 .leftBox, .rightBox, .midBox {
     display: flex;
