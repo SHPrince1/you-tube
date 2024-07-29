@@ -34,7 +34,7 @@ button{
     /* display: flex; */
     /*height: 20%;
     */margin-top: 25px auto;
-    line-height: 4;
+    line-height: 1;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -202,8 +202,8 @@ font-size: 15px;
     .movieDataBox{
         /* display: none; */
         /* border: 1px solid red; */
-        width: 80%;
-        margin: 110px 0 0 42px;
+        width: auto;
+        margin: 110px 0 10px 42px;
 }
     .movieImg{
         width: auto;
@@ -270,7 +270,7 @@ font-size: 15px;
     .Videotitle{
         
             font-size: 13px;
-            line-height: 1;
+            line-height: 0.4;
             width: 120px;
             flex-wrap: wrap;
             font-weight: bolder;
