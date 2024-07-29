@@ -21,7 +21,7 @@ button{
    
     display: flex;
     flex-wrap: wrap;
-    padding: 10px 20px 0 11px;
+    padding: 10px 20px 10px 11px;
     width: 78%;
     /* border: 1px solid red; */
     margin: 119px 10px 20px 252px;}
@@ -203,7 +203,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: auto;
-        margin: 110px 0 10px 42px;
+        margin: 110px 0 10px 35px;
 }
     .movieImg{
         width: auto;
@@ -262,7 +262,7 @@ font-size: 15px;
         /* display: none; */
         /* border: 1px solid red; */
         width: 80%;
-        margin: 110px 0 0 42px;
+        margin: 110px 0 10px 38px;
 }
     .movieImg{
         width: auto;
