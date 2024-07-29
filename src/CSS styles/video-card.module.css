@@ -4,3 +4,26 @@
     gap: 10px;
     border: 5px solid #fff;
 }
+
+
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 1200px){
+    /*Tablets [601px -> 1200px]*/
+
+  
+}
+@media only screen and (max-width: 600px){
+	/*Big smartphones [426px -> 600px]*/
+
+}
+@media only screen and (max-width: 425px){
+	/*Small smartphones [325px -> 425px]*/
+    /* .AllVideosContainer{
+        margin: 10px auto;
+        width: 90%;
+        border: 1px solid red;
+    } */
+    
+    
+}

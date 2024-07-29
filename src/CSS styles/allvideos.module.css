@@ -7,7 +7,7 @@ button{
     /* display: flex; */
     /* flex-wrap: wrap; */
     /* gap: 10px; */
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 30%;
     /* height: 10vh; */
     /* width: 25%; */
@@ -198,12 +198,16 @@ font-size: 15px;
 }
 @media only screen and (max-width: 425px){
 	/*Small smartphones [325px -> 425px]*/
-
+.AllVideosContainer{
+    margin: 10px 700px 10px 100px;
+    border: 1px solid red;
+}
     .movieDataBox{
         /* display: none; */
-        /* border: 1px solid red; */
+        display: flex;
+        border: 1px solid #fff;
         width: 80%;
-        margin: 110px 0 80px 35px;
+        margin: 110px 10px 10px 32px;
 }
     .movieImg{
         width: auto;
