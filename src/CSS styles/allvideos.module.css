@@ -290,8 +290,8 @@ font-size: 15px;
 }
     
 }
-@media only screen and (max-width: 320px){
-	/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 368px){
+	/*Small smartphones [325px -> 475px]*/
 
     .movieDataBox{
         /* display: none; */
@@ -309,7 +309,7 @@ font-size: 15px;
     z-index: 1;
 }
 .movieImg{
-    width: 100px;
+    width: auto;
 }
     
 }
