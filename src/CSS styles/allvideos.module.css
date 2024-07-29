@@ -308,5 +308,8 @@ font-size: 15px;
     /* border: 1px solid blue; */
     z-index: 1;
 }
+.movieImg{
+    width: 100px;
+}
     
 }
