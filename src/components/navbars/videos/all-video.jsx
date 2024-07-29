@@ -43,6 +43,8 @@ const filteredMovieData = searchQuery
         setLoading(false);
         const response = await axios.get(apiUrl);
         const newMovies = response.data.results;
+
+        
         setMovieData((prevData) => {
           const existingMovieIds = new Set(prevData.map(movie => movie.id));
           const filteredNewMovies = newMovies.filter(movie => !existingMovieIds.has(movie.id));
