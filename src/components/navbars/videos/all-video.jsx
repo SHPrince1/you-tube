@@ -92,7 +92,7 @@ const filteredMovieData = searchQuery
           />
         ))}
 
-        {/* <div>Loading</div> */}
+        <div></div>
       
       </div>
     </div>

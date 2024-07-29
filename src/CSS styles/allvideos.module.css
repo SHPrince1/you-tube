@@ -7,7 +7,7 @@ button{
     /* display: flex; */
     /* flex-wrap: wrap; */
     /* gap: 10px; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 30%;
     /* height: 10vh; */
     /* width: 25%; */
@@ -199,15 +199,18 @@ font-size: 15px;
 @media only screen and (max-width: 425px){
 	/*Small smartphones [325px -> 425px]*/
 .AllVideosContainer{
-    margin: 10px 700px 10px 100px;
-    border: 1px solid red;
+    /* margin: 10px 700px 10px 100px; */
+    /* border: 1px solid red; */
 }
     .movieDataBox{
         /* display: none; */
         display: flex;
-        border: 1px solid #fff;
-        width: 80%;
-        margin: 110px 10px 10px 32px;
+        /* border: 1px solid red; */
+        width:auto;
+        
+        /* height: 100vh; */
+        margin: 100px 5px 10px 34px;
+        
 }
     .movieImg{
         width: auto;
@@ -215,7 +218,7 @@ font-size: 15px;
     .Videotitle{
         
             font-size: 13px;
-            line-height: 1;
+            line-height: 0.9;
             width: 120px;
             flex-wrap: wrap;
             font-weight: bolder;
@@ -250,8 +253,8 @@ font-size: 15px;
 
     .displayImageBox{
         display: flex;
-        margin: 0 auto;
-        width: auto;
+        margin: 10px auto;
+        /* width: auto; */
         height: 230px;
         /* border: 1px solid blue; */
         z-index: 1;
@@ -267,6 +270,7 @@ font-size: 15px;
         /* border: 1px solid red; */
         width: 80%;
         margin: 110px 0 10px 38px;
+        scale: 2;
 }
     .movieImg{
         width: auto;
