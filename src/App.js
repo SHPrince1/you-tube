@@ -4,6 +4,7 @@ import Navbar from "../src/components/navbars/navbar";
 import Sidenav from "../src/components/navbars/sidenav";
 import TopNav from "./components/navbars/top-nav";
 import AllVideos from "./components/navbars/videos/all-video";
+import DetailedPage from "./pagess/detailed-page";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Router>
           <Routes>
             <Route exact path="/" element={<AllVideos />} />
+            <Route exact path="/detailed-page" element={<DetailedPage />} />
             
             {/* <Route exact path="page1" element={<Page1 />} />
             <Route exact path="page2" element={<Page2 />} />
