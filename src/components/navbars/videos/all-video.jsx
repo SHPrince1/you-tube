@@ -1,12 +1,13 @@
-import React, {  useEffect, useState,} from "react";
+import React, {  useEffect, useContext, useState,} from "react";
 import axios from "axios";
-// import Fuse from 'fuse.js';
+import Fuse from 'fuse.js';
 // import LoadingSpin from "react-loading-spin";
 import Style from "../../../CSS styles/allvideos.module.css";
 import VideoCard from "./video-card";
-// import { SearchContext } from '../../../search-context';
+import { SearchContext } from '../../../search-context';
 
 const AllVideos = () => {
+  const { searchQuery } = useContext(SearchContext);
   const [movieData, setMovieData] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,20 @@ const AllVideos = () => {
 //   const decrement = () => {
 //     setPage((prevCount) => (prevCount <= 1 ? 500 : prevCount - 1));
 //   };
+
+
+// Configure Fuse.js
+const options = {
+  keys: ['title'],
+  includeScore: true,
+  threshold: 0.3, // threshold for more or less fuzzy matching
+};
+
+const fuse = new Fuse(movieData, options);
+
+const filteredMovieData = searchQuery
+  ? fuse.search(searchQuery).map(result => result.item)
+  : movieData;
 
   useEffect(() => {
     const fetchMovieData = async (page) => {
@@ -64,7 +79,7 @@ const AllVideos = () => {
       
       {error && <div className={Style.error}>Error: {error.message}</div>}
       <div className={Style.movieDataBox}>
-        {movieData.map((item) => (
+        {filteredMovieData.map((item) => (
           <VideoCard
             key={item.id}
             poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
