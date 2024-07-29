@@ -12,7 +12,7 @@ const handleChange = (e) => {
       type="text"
       value={searchQuery}
       onChange={handleChange}
-      placeholder="Search..."
+      placeholder="Search movie..."
     />);
 };
 
