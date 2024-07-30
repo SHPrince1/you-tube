@@ -29,11 +29,11 @@ const DetailedPage = () => {
   }, [baseUrl]);
 
   if (loading) {
-    return <div className={Style.loader}>Loading...</div>;
+    return <p className={Style.loader}>Loading...</p>;
   }
 
   if (error) {
-    return <div className={Style.error}>Error: {error.message}</div>;
+    return <p className={Style.error}>Error: {error.message}</p>;
   }  
   return (
     
