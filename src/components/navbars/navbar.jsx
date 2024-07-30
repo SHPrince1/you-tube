@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 
 import Style from "../../CSS styles/navbar.module.css";
 
@@ -20,7 +21,7 @@ const Navbar = () => {
             <GiHamburgerMenu size={20} />
           </div>
           <div>
-            <a href="./">
+            < a href  ='/'>
               <img
                 src={Logo}
                 alt=""
