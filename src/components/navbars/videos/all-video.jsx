@@ -1,6 +1,7 @@
 import React, {  useEffect, useContext, useState,} from "react";
 import axios from "axios";
 import Fuse from 'fuse.js';
+import { Link } from 'react-router-dom';
 // import LoadingSpin from "react-loading-spin";
 import Style from "../../../CSS styles/allvideos.module.css";
 import VideoCard from "./video-card";
@@ -82,6 +83,7 @@ const filteredMovieData = searchQuery
       {error && <div className={Style.error}>Error: {error.message}</div>}
       <div className={Style.movieDataBox}>
         {filteredMovieData.map((item) => (
+          <Link to={`/detailed-page/${item.id}`} key={item.id}>
           <VideoCard
             key={item.id}
             poster_path={`https://image.tmdb.org/t/p/w500${item?.poster_path}`}
@@ -90,6 +92,7 @@ const filteredMovieData = searchQuery
             backdrop_path={`https://image.tmdb.org/t/p/w500${item?.backdrop_path}`}
             release_date={item.release_date}
           />
+        </Link>
         ))}
 
         <div></div>

@@ -94,6 +94,11 @@
   .circleNotification{
     display: none !important;
   }
+  .leftBox img{
+    width: 50px;
+        height: 31px;
+        margin: 5px 10px;
+}
     .navBox {
         /* border: 1px solid black; */
         width: 95%;

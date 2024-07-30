@@ -20,7 +20,7 @@ function App() {
         <Router>
           <Routes>
             <Route exact path="/" element={<AllVideos />} />
-            <Route exact path="/detailed-page" element={<DetailedPage />} />
+            <Route exact path="/detailed-page/:id" element={<DetailedPage />} />
             
             {/* <Route exact path="page1" element={<Page1 />} />
             <Route exact path="page2" element={<Page2 />} />

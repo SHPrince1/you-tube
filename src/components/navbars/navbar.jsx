@@ -6,9 +6,10 @@ import Style from "../../CSS styles/navbar.module.css";
 import { IoMicCircleOutline } from "react-icons/io5";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoNotificationsCircleSharp } from "react-icons/io5";
-
+import Logo from '../../images/logo1.png'
 import { FaChromecast } from "react-icons/fa";
 import CustomInput from "../input";
+
 // import ExpandableSearchBar from "../expandable-searchbar";
 const Navbar = () => {
   return (
@@ -21,7 +22,7 @@ const Navbar = () => {
           <div>
             <a href="www.shprince.netlify.app">
               <img
-                src="https://static.india.com/wp-content/uploads/2022/12/youtube-5.jpg"
+                src={Logo}
                 alt=""
               />
             </a>
