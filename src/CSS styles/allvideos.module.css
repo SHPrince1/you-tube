@@ -321,3 +321,25 @@ font-size: 15px;
     
 }
 
+
+@media only screen and (max-width: 330px){
+	/*Small smartphones [325px -> 425px]*/
+
+    .movieDataBox{
+        /* display: none; */
+        /* border: 1px solid red; */
+        width: auto;
+        margin: 110px 0 10px 10px;
+        
+}
+.displayImageBox{
+    display: flex;
+    margin: 10px auto;
+    /* width: auto; */
+    height: 230px;
+    /* border: 1px solid blue; */
+    z-index: 1;
+}
+    
+}
+
