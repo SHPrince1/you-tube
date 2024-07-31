@@ -86,7 +86,7 @@
        overflow-y: scroll;
     }
 }
-@media only screen and (max-width: 425px){
+@media only screen and (max-width: 430px){
 	/*Small smartphones [325px -> 425px]*/
 
     .navBox{
