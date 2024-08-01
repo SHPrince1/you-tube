@@ -358,3 +358,36 @@ font-size: 15px;
     
 }
 
+@media only screen and (max-width: 320px){
+	/*Small smartphones [325px -> 425px]*/
+
+    .movieDataBox{
+        /* display: none; */
+        /* border: 1px solid red; */
+        width: auto;
+        margin: 110px 0 10px 4px;
+        
+}
+
+.movieImg{
+    border-radius: 20px;
+    cursor: pointer;
+    width: 130px;
+    /* display: none; */
+    z-index: 2;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.displayImageBox{
+    display: flex;
+    margin: 10px auto;
+    /* width: auto; */
+    height: 230px;
+    /* border: 1px solid blue; */
+    z-index: 1;
+}
+    
+}
+
