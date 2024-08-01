@@ -275,29 +275,6 @@ font-size: 15px;
     
 }
 
-@media only screen and (max-width: 390px){
-	/*Small smartphones [325px -> 475px]*/
-
-    .movieDataBox{
-        /* display: none; */
-        /* border: 1px solid red; */
-        width: auto;
-        margin: 110px 0 10px 44px;
-        
-}
-.displayImageBox{
-    display: flex;
-    margin: 10px 1px 10px 8px;
-    /* width: auto; */
-    height: 180px;
-    /* border: 1px solid blue; */
-    z-index: 1;
-}
-.movieImg{
-    width: auto;
-}
-    
-}
 
 
 @media only screen and (max-width: 375px){
@@ -363,7 +340,7 @@ font-size: 15px;
 
     .movieDataBox{
         /* display: none; */
-        /* border: 1px solid red; */
+        border: 1px solid red;
         width: auto;
         margin: 110px 0 10px 4px;
         
