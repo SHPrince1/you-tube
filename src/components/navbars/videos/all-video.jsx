@@ -95,8 +95,8 @@ const filteredMovieData = searchQuery
         </Link>
         ))}
 
-        <div></div>
-      
+
+
       </div>
     </div>
   );

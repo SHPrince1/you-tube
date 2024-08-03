@@ -1,5 +1,6 @@
 import  { React,useEffect, useState }from 'react'
 import axios from 'axios';
+import LoadingSpin from "react-loading-spin";
 import { useParams } from 'react-router-dom';
 import Style from "../CSS styles/detailed-page-card.module.css";
 import DetailedPageCard from '../components/detailed-page-card'
@@ -29,7 +30,20 @@ const DetailedPage = () => {
   }, [baseUrl]);
 
   if (loading) {
-    return <p className={Style.loader}>Loading...</p>;
+    return <p className={Style.loader}>
+
+<LoadingSpin
+            duration="2s"
+            width="15px"
+            timingFunction="ease-in-out"
+            direction="alternate"
+            size="80px"
+            primaryColor="red"
+            secondaryColor="#333"
+            numberOfRotationsInAnimation={2}
+        />
+
+    </p>;
   }
 
   if (error) {
