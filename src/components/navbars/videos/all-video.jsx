@@ -29,7 +29,7 @@ const AllVideos = () => {
 const options = {
   keys: ['title'],
   includeScore: true,
-  threshold: 0.3, // threshold for more or less fuzzy matching
+  threshold: 0.6, // threshold for more or less fuzzy matching
 };
 
 const fuse = new Fuse(movieData, options);
