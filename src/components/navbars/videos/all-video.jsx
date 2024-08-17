@@ -122,11 +122,11 @@ const AllVideos = () => {
           <div className={Style.loadBox}>
             {loading && (
               <LoadingSpin
-                duration="20s"
+                duration=".2s"
                 width="15px"
                 timingFunction="ease-in-out"
                 direction="alternate"
-                size="80px"
+                size="20px"
                 primaryColor="red"
                 secondaryColor="#333"
                 numberOfRotationsInAnimation={2}
