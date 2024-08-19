@@ -126,7 +126,7 @@ const AllVideos = () => {
                 width="15px"
                 timingFunction="ease-in-out"
                 direction="alternate"
-                size="20px"
+                size="50px"
                 primaryColor="red"
                 secondaryColor="#333"
                 numberOfRotationsInAnimation={2}
